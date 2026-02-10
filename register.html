@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/remove bg logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียนผู้ป่วยใหม่ | Hospital Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_form.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+    <div class="gradient-bg"></div>
+
+    <!-- Header Reuse -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Logo (Left) -->
+            <a href="index.html" class="logo"
+                style="display: flex; align-items: center; transform: scale(1.2); transform-origin: left;">
+                <img src="assets/circlelogo.png" alt="logo-icon" style="width: 35px; height: 35px;">
+                <span style="font-size: 12px;">บริการ Telemedicine<span class="text-gradient">
+                        <br> โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</span></span>
+            </a>
+
+            <!-- Desktop Right Nav -->
+            <div class="nav-desktop-group right">
+                <a href="index.html">หน้าหลัก</a>
+                <a href="Whatis.html">คืออะไร?</a>
+                <a href="contact.html">ติดต่อเรา</a>
+                <a href="register.html">ลงทะเบียนทันที</a>
+            </div>
+
+            <div class="mobile-toggle" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </div>
+
+            <!-- Mobile Menu (Hidden on Desktop) -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">หน้าหลัก</a>
+                <a href="Whatis.html">คืออะไร?</a>
+                <a href="contact.html">ติดต่อเรา</a>
+                <a href="register.html">ลงทะเบียนทันที</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <span class="badge">📝 ลงทะเบียน</span>
+                <h1 class="page-header-title">ลงทะเบียนผู้ป่วยใหม่</h1>
+                <p class="page-header-desc">
+                    กรุณากรอกข้อมูลให้ครบถ้วนเพื่อความสะดวกรวดเร็วในการให้บริการ
+                </p>
+            </div>
+        </div>
+
+        <div class="container form-container">
+            <!-- Glassmorphism Card -->
+            <div class="registration-card">
+                <form id="registrationForm">
+                    <!-- ข้อมูลส่วนตัว -->
+                    <h3 class="form-section-title">
+                        <i data-lucide="user"></i>ข้อมูลส่วนตัว
+                    </h3>
+
+                    <div class="form-group">
+                        <label class="form-label">เลขบัตรประจำตัวประชาชน <span class="required">*</span></label>
+                        <input type="text" class="form-control" name="idCard" placeholder="กรอกเลขบัตรประชาชน 13 หลัก"
+                            required pattern="\d{13}" title="กรุณากรอกเลขบัตรประชาชน 13 หลัก">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">ชื่อ <span class="required">*</span></label>
+                            <input type="text" class="form-control" name="firstName" placeholder="ชื่อจริง" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">นามสกุล <span class="required">*</span></label>
+                            <input type="text" class="form-control" name="lastName" placeholder="นามสกุล" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">เพศ <span class="required">*</span></label>
+                            <select class="form-control" name="gender" required>
+                                <option value="" disabled selected>เลือกเพศ</option>
+                                <option value="ชาย">ชาย</option>
+                                <option value="หญิง">หญิง</option>
+                                <option value="ไม่ระบุ">ไม่ระบุ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">วันเกิด <span class="required">*</span></label>
+                            <input type="date" class="form-control" name="birthDate" id="birthDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">เบอร์โทรศัพท์ <span class="required">*</span></label>
+                        <input type="tel" class="form-control" name="phone" placeholder="08x-xxx-xxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">ที่อยู่ปัจจุบัน (สำหรับการติดต่อ) <span
+                                class="required">*</span></label>
+                        <textarea class="form-control" name="address"
+                            placeholder="บ้านเลขที่ หมู่ ซอย ถนน ตำบล อำเภอ จังหวัด รหัสไปรษณีย์" required
+                            rows="3"></textarea>
+                    </div>
+
+                    <!-- ข้อมูลสุขภาพ -->
+                    <h3 class="form-section-title">
+                        <i data-lucide="activity"></i>ข้อมูลสุขภาพ
+                    </h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">น้ำหนัก (กก.) <span class="required">*</span></label>
+                            <input type="number" class="form-control" name="weight" placeholder="ระบุน้ำหนัก" required
+                                step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ส่วนสูง (ซม.) <span class="required">*</span></label>
+                            <input type="number" class="form-control" name="height" placeholder="ระบุส่วนสูง" required
+                                step="1">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">โรคประจำตัว (หากมี)</label>
+                        <input type="text" class="form-control" name="congenitalDisease"
+                            placeholder="ถ้ามีโปรดระบุ (ถ้าไม่มีให้ใส่ -)" value="-">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">ประวัติการแพ้ยา (หากมี)</label>
+                        <textarea class="form-control" name="drugAllergy"
+                            placeholder="ถ้ามีโปรดระบุชื่อยาและอาการแพ้ (ถ้าไม่มีให้ใส่ -)" rows="2">-</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">อาการเบื้องต้น<span class="required">*</span></label>
+                        <textarea class="form-control" name="symptoms"
+                            placeholder="ระบุอาการที่เป็น เช่น ปวดศีรษะ ตัวร้อน ไอ..." required rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">วัตถุประสงค์การใช้บริการ<span class="required">*</span></label>
+                        <textarea class="form-control" name="objectives" placeholder="" required rows="3"></textarea>
+                    </div>
+
+                    <div class="form-row" style="align-items: end;">
+                        <div class="form-group">
+                            <label class="form-label">
+                                ประสงค์จะรับใบรับรองแพทย์หรือไม่ <span class="required">*</span></label>
+                            <select class="form-control" name="serviceType" required>
+                                <option value="" disabled selected>เลือก</option>
+                                <option value="รับใบรับรองแพทย์">รับ</option>
+                                <option value="ไม่รับใบรับรองแพทย์">ไม่รับ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" name="needMedicalCert" value="ต้องการ">
+                                <span class="checkbox-text">
+                                    ข้าพเจ้ายินยอมให้ข้อมูลและตกลงรับการรักษาผ่านระบบ Telemedicine ตาม
+                                    <a href="terms.html">ข้อตกลงและเงื่อนไข</a>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-submit">
+                        ลงทะเบียน <i data-lucide="send"></i>
+                    </button>
+                    <!-- IMPORTANT: Replace this with your Web App URL -->
+                    <input type="hidden" id="webAppUrl" value="REPLACE_WITH_YOUR_WEB_APP_URL">
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Reuse -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <img src="assets/circlelogo.png" alt="logo-icon" style="width: 40px; height: 40px;">
+                <h3 class="text-gradient">
+                    <a href="index.html"
+                        style="text-decoration: none; color: inherit;">โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</a>
+                </h3>
+                <p>บริการการแพทย์ทางไกล พัฒนาโดยโรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร
+                    เพื่อการเข้าถึงบริการสาธารณสุขที่สะดวกและรวดเร็ว</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/kppmu" class="social-icon" title="Facebook">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@kppmuch?_t=ZS-8zi6FyEyffr&_r=1" target="_blank"
+                        style="text-decoration: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 24 24" style="fill:#acacac;">
+                            <path
+                                d="M12.53,2c0.11,4.95,3.31,8.02,8.12,8.06V14.1c-2.81-0.12-5.46-1.39-7.31-3.41l0,8.16c0,4.14-3.36,7.5-7.5,7.5 c-4.14,0-7.5-3.36-7.5-7.5c0-4.14,3.36-7.5,7.5-7.5c0.5,0,0.98,0.05,1.44,0.15l0,4.2c-0.45-0.1-0.92-0.15-1.44-0.15 c-1.82,0-3.3,1.48-3.3,3.3c0,1.82,1.48,3.3,3.3,3.3c1.82,0,3.3-1.48,3.3-3.3l0-14.82L12.53,2z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>เมนูหลัก</h4>
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="Whatis.html">Telemedicine คืออะไร?</a></li>
+                    <li><a href="#register">ลงทะเบียน</a></li>
+                    <li><a href="terms.html">ข้อตกลงและเงื่อนไข</a></li>
+                    <li><a href="contact.html">ติดต่อเรา</a></li>
+                    <li><a href="privacy.html">นโยบายความเป็นส่วนตัว</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>ติดต่อ</h4>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/NzzFctVAZoiXyLbMA"><strong>ที่อยู่:</strong> 35 ซ.2
+                            ถ.ราชดำเนิน 1 ต.ในเมือง อ.เมือง จ.กำแพงเพชร
+                            62000</a></li>
+                    <li><a href="tel:055716715"><strong>โทร:</strong> 055-716-715</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer-bottom">
+                <p>ลิขสิทธิ์ © 2569 โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร | สงวนลิขสิทธิ์</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <h3 style="color: white; font-weight: 500;">กำลังบันทึกข้อมูล...</h3>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Auto Calculate Age
+        document.getElementById('birthDate').addEventListener('change', function () {
+            const birthDate = new Date(this.value);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            document.getElementById('age').value = age;
+        });
+
+        // Form Submission
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Basic UI Loading
+            const overlay = document.getElementById('loadingOverlay');
+            overlay.classList.add('active');
+
+            const webAppUrl = document.getElementById('webAppUrl').value;
+
+            if (webAppUrl === 'REPLACE_WITH_YOUR_WEB_APP_URL') {
+                alert('กรุณาใส่ Web App URL ในโค้ดก่อนใช้งานจริง');
+                overlay.classList.remove('active');
+                return;
+            }
+
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+
+            // Add Timestamp
+            data.timestamp = new Date().toLocaleString('th-TH');
+
+            // Send to Google Apps Script
+            fetch(webAppUrl, {
+                method: 'POST',
+                mode: 'no-cors', // Important for GAS Web App
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(() => {
+                    overlay.classList.remove('active');
+                    // Use SweetAlert if available, otherwise native alert
+                    // For now, native alert styled nicely or just redirect
+                    alert('ลงทะเบียนสำเร็จ! \nเจ้าหน้าที่จะตรวจสอบข้อมูลและติดต่อกลับทาง LINE');
+                    this.reset();
+                    window.location.href = 'index.html';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    overlay.classList.remove('active');
+                    alert('เกิดข้อผิดพลาดในการลงทะเบียน กรุณาลองใหม่อีกครั้ง');
+                });
+        });
+    </script>
+</body>
+
+</html>

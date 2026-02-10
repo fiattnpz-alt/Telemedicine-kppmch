@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="assets/remove bg logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบลงทะเบียนออนไลน์ | Premium Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="gradient-bg"></div>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Logo (Left) -->
+            <a href="index.html" class="logo"
+                style="display: flex; align-items: center; transform: scale(1.2); transform-origin: left;">
+                <img src="assets/circlelogo.png" alt="logo-icon" style="width: 35px; height: 35px;">
+                <span style="font-size: 12px;">บริการ Telemedicine<span class="text-gradient">
+                        <br> โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</span></span>
+            </a>
+
+            <!-- Desktop Right Nav -->
+            <div class="nav-desktop-group right">
+                <a href="index.html">หน้าหลัก</a>
+                <a href="Whatis.html">คืออะไร?</a>
+                <a href="contact.html">ติดต่อเรา</a>
+                <a href="register.html">ลงทะเบียนทันที</a>
+            </div>
+
+            <div class="mobile-toggle" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </div>
+
+            <!-- Mobile Menu (Hidden on Desktop) -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">หน้าหลัก</a>
+                <a href="Whatis.html">คืออะไร?</a>
+                <a href="contact.html">ติดต่อเรา</a>
+                <a href="register.html">ลงทะเบียนทันที</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" style="padding-top: 50px;">
+            <div class="container">
+                <div class="section-header">
+                </div>
+                <div class="features-grid" style="display: flex; justify-content: center; width: 100%;">
+                    <div class="feature-card"
+                        style="max-width: 1200px; display: flex; flex-direction: column; align-items: center;">
+                        <h2>นโยบายความเป็นส่วนตัว (Privacy Policy)</h2>
+                        <p>สำหรับบริการการแพทย์ทางไกล (Telemedicine)</p>
+                        <br>
+
+                        <h3 style="text-align: left; width: 100%;">ข้อมูลที่เราเก็บรวบรวม</h3>
+                        <ul>
+                            <hr style="width: 100%; border: 0; border-top: 1px solid #acacac;">
+                            <p style="text-align: left; width: 100%; margin-top: 10px;">
+                                เราเก็บรวบรวมข้อมูลที่จำเป็นเพื่อให้บริการการแพทย์ทางไกลแก่ท่าน ซึ่งรวมถึง:</p>
+                            <li style="text-align: left; width: 100%; margin-top: 10px; color: #acacac">
+                                ข้อมูลส่วนบุคคล: เช่น ชื่อ-นามสกุล, เลขบัตรประชาชน, วันเดือนปีเกิด, ที่อยู่,
+                                และเบอร์โทรศัพท์</li>
+
+                            <li style="text-align: left; width: 100%; margin-top: 10px; color: #acacac;">
+                                ข้อมูลสุขภาพ: เช่น อาการเบื้องต้น, โรคประจำตัว, ประวัติการแพ้ยา, น้ำหนัก, ส่วนสูง
+                                และข้อมูลอื่นๆ ที่เกี่ยวข้องกับการวินิจฉัยและการรักษา</li>
+                            <li style="text-align: left; width: 100%; margin-top: 10px; color: #acacac;">
+                                ข้อมูลทางเทคนิค: เช่น ข้อมูลการใช้งานเว็บไซต์ เพื่อนำไปปรับปรุงและพัฒนาบริการ</li>
+                        </ul>
+                        <br>
+                        <h3 style="text-align: left; width: 100%;">วัตถุประสงค์ในการใช้ข้อมูล</h3>
+                        <hr style="width: 100%; border: 0; border-top: 1px solid #acacac;">
+                        <ul style="padding-left: 20px; margin: 0; list-style: disc; width: 100%;">
+                            <p style="text-align: left; width: 100%; margin-top: 10px; margin-left: -20px;">
+                                ข้อมูลของท่านจะถูกนำไปใช้เพื่อวัตถุประสงค์ดังต่อไปนี้:
+                            </p>
+                            <li style="text-align: left; width: 100%; margin-top: 10px; color: #acacac">
+                                เพื่อการวินิจฉัย, การรักษา, และการติดตามผลทางการแพทย์ผ่านระบบ Telemedicine
+                            </li>
+                            <li style="text-align: left; width: 100%; margin-top: 10px; color: #acacac;">
+                                เพื่อการยืนยันตัวตนและทำการนัดหมายกับบุคลากรทางการแพทย์
+                            </li>
+                            <li style="text-align: left; width: 100%; margin-top: 10px; color: #acacac;">
+                                เพื่อการติดต่อสื่อสาร แจ้งข้อมูลที่เกี่ยวข้องกับการนัดหมายและการรักษา
+                            </li>
+                            <li style="text-align: left; width: 100%; margin-top: 10px; color: #acacac;">
+                                เพื่อการปฏิบัติตามกฎหมายและข้อบังคับที่เกี่ยวข้องกับสถานพยาบาล
+                            </li>
+                        </ul>
+                        <br>
+                        <h3 style="text-align: left; width: 100%;">ความปลอดภัยของข้อมูล</h3>
+                        <hr style="width: 100%; border: 0; border-top: 1px solid #acacac;">
+                        <ul style="padding-left: 20px; margin: 0; list-style: disc; width: 100%;">
+                            <p style="text-align: left; width: 100%; margin-top: 10px; margin-left: -20px;">
+                                เราให้ความสำคัญสูงสุดกับความปลอดภัยของข้อมูลส่วนบุคคลและข้อมูลสุขภาพของท่าน
+                                เรามีมาตรการรักษาความปลอดภัยทางเทคนิคและการบริหารจัดการที่เหมาะสม
+                                เพื่อป้องกันการเข้าถึง, การเปิดเผย, หรือการนำข้อมูลไปใช้โดยไม่ได้รับอนุญาต</p>
+                        </ul>
+                        <br>
+                        <h3 style="text-align: left; width: 100%;">สิทธิของเจ้าของข้อมูล</h3>
+                        <hr style="width: 100%; border: 0; border-top: 1px solid #acacac;">
+                        <ul style="padding-left: 20px; margin: 0; list-style: disc; width: 100%;">
+                            <p style="text-align: left; width: 100%; margin-top: 10px; margin-left: -20px;">
+                                ท่านมีสิทธิในการเข้าถึง, แก้ไข, หรือขอให้ลบข้อมูลส่วนบุคคลของท่านตามขอบเขตที่กฎหมายกำหนด
+                                หากท่านต้องการใช้สิทธิดังกล่าว กรุณาติดต่อเราตามข้อมูลในหน้า
+                                <a href="contact.html" style="color:#38bdf8;">ติดต่อเรา</a>
+                            </p>
+                        </ul>
+
+                        <br>
+                        <button class="btn btn-primary btn-lg" onclick="window.location.href='register.html';">
+                            ลงทะเบียนพบแพทย์ <i data-lucide="arrow-right"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <img src="assets/circlelogo.png" alt="logo-icon" style="width: 40px; height: 40px;">
+                <h3 class="text-gradient">
+                    <a href="index.html"
+                        style="text-decoration: none; color: inherit;">โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</a>
+                </h3>
+                <p>บริการการแพทย์ทางไกล พัฒนาโดยโรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร
+                    เพื่อการเข้าถึงบริการสาธารณสุขที่สะดวกและรวดเร็ว</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/kppmu" class="social-icon" title="Facebook">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@kppmuch?_t=ZS-8zi6FyEyffr&_r=1" target="_blank"
+                        style="text-decoration: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 24 24" style="fill:#acacac;">
+                            <path
+                                d="M12.53,2c0.11,4.95,3.31,8.02,8.12,8.06V14.1c-2.81-0.12-5.46-1.39-7.31-3.41l0,8.16c0,4.14-3.36,7.5-7.5,7.5 c-4.14,0-7.5-3.36-7.5-7.5c0-4.14,3.36-7.5,7.5-7.5c0.5,0,0.98,0.05,1.44,0.15l0,4.2c-0.45-0.1-0.92-0.15-1.44-0.15 c-1.82,0-3.3,1.48-3.3,3.3c0,1.82,1.48,3.3,3.3,3.3c1.82,0,3.3-1.48,3.3-3.3l0-14.82L12.53,2z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>เมนูหลัก</h4>
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="Whatis.html">Telemedicine คืออะไร?</a></li>
+                    <li><a href="#register">ลงทะเบียน</a></li>
+                    <li><a href="terms.html">ข้อตกลงและเงื่อนไข</a></li>
+                    <li><a href="contact.html">ติดต่อเรา</a></li>
+                    <li><a href="privacy.html">นโยบายความเป็นส่วนตัว</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>ติดต่อ</h4>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/NzzFctVAZoiXyLbMA"><strong>ที่อยู่:</strong> 35 ซ.2
+                            ถ.ราชดำเนิน 1 ต.ในเมือง อ.เมือง จ.กำแพงเพชร
+                            62000</a></li>
+                    <li><a href="tel:055716715"><strong>โทร:</strong> 055-716-715</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer-bottom">
+                <p>ลิขสิทธิ์ © 2569 โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร | สงวนลิขสิทธิ์</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
