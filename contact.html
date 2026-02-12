@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
@@ -52,12 +53,12 @@
     <main>
         <section class="hero-section">
             <div class="container">
-                <h1>ติดต่อเรา</h1>
-                <p class="hero-desc" style="font-size: 16px;">เราพร้อมให้ความช่วยเหลือ
+                <h1 class="hero-animate hero-animate-delay-1">ติดต่อเรา</h1>
+                <p class="hero-desc hero-animate hero-animate-delay-2" style="font-size: 16px;">เราพร้อมให้ความช่วยเหลือ
                     หากมีข้อสงสัยสามารถติดต่อเราได้ตามช่องทางด้านล่าง
                 </p>
                 <div class="features-grid" style="display: flex; justify-content: center; width: 100%;">
-                    <div class="feature-card"
+                    <div class="feature-card card-hover-lift hero-animate hero-animate-delay-3"
                         style="max-width: 800px; display: flex; flex-direction: column; align-items: center; text-align: left;">
                         <h1>ช่องทางการติดต่อ</h1>
                         <div class="hero-btns">
@@ -119,7 +120,7 @@
 
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer footer-animate">
         <div class="container footer-grid">
             <div class="footer-about">
                 <img src="assets/circlelogo.png" alt="logo-icon" style="width: 40px; height: 40px;">
@@ -150,7 +151,6 @@
                 <ul>
                     <li><a href="index.html">หน้าแรก</a></li>
                     <li><a href="Whatis.html">Telemedicine คืออะไร?</a></li>
-                    <li><a href="#register">ลงทะเบียน</a></li>
                     <li><a href="terms.html">ข้อตกลงและเงื่อนไข</a></li>
                     <li><a href="contact.html">ติดต่อเรา</a></li>
                     <li><a href="privacy.html">นโยบายความเป็นส่วนตัว</a></li>

@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
@@ -53,11 +54,13 @@
     <main>
         <section class="hero-section">
             <div class="container">
-                <h1>บริการการแพทย์ทางไกล<br><span class="text-gradient">(Telemedicine) คืออะไร?</span></h1>
-                <p class="hero-desc">ทำความเข้าใจบริการ Telemedicine เพื่อการดูแลสุขภาพที่สะดวกและเข้าถึงง่ายยิ่งขึ้น
+                <h1 class="hero-animate hero-animate-delay-1">บริการการแพทย์ทางไกล<br><span
+                        class="text-gradient">(Telemedicine) คืออะไร?</span></h1>
+                <p class="hero-desc hero-animate hero-animate-delay-2">ทำความเข้าใจบริการ Telemedicine
+                    เพื่อการดูแลสุขภาพที่สะดวกและเข้าถึงง่ายยิ่งขึ้น
                 </p>
                 <div class="features-grid" style="display: flex; justify-content: center; width: 100%;">
-                    <div class="feature-card"
+                    <div class="feature-card card-hover-lift animate-on-scroll"
                         style="max-width: 800px; display: flex; flex-direction: column; align-items: center; text-align: left;">
 
                         <h2>คำจำกัดความ</h2>
@@ -71,7 +74,7 @@
                 </div>
                 <hr style="border: 0; border-top: 1px solid rgba(244, 213, 213, 0.1); margin: 20px 0;">
                 <br>
-                <h1>วิดีโอแนะนำบริการ Telemedicine</h1>
+                <h1 class="animate-on-scroll">วิดีโอแนะนำบริการ Telemedicine</h1>
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/KRUnZ7oRZc8" title="Telemedicine Explanation Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -81,7 +84,7 @@
         </section>
 
         <section class="container">
-            <article class="content-article">
+            <article class="content-article animate-on-scroll">
                 <h2>ประโยชน์ของ Telemedicine</h2>
                 <ul>
                     <li> <strong style="color: aliceblue;">ความสะดวกสบาย:</strong> รับคำปรึกษาจากแพทย์ได้จากทุกที่
@@ -113,7 +116,7 @@
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer footer-animate">
         <div class="container footer-grid">
             <div class="footer-about">
                 <img src="assets/circlelogo.png" alt="logo-icon" style="width: 40px; height: 40px;">
@@ -144,7 +147,6 @@
                 <ul>
                     <li><a href="index.html">หน้าแรก</a></li>
                     <li><a href="Whatis.html">Telemedicine คืออะไร?</a></li>
-                    <li><a href="#register">ลงทะเบียน</a></li>
                     <li><a href="terms.html">ข้อตกลงและเงื่อนไข</a></li>
                     <li><a href="contact.html">ติดต่อเรา</a></li>
                     <li><a href="privacy.html">นโยบายความเป็นส่วนตัว</a></li>

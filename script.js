@@ -47,4 +47,58 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ============================================
+    // SCROLL REVEAL (INTERSECTION OBSERVER)
+    // ============================================
+    const revealElements = document.querySelectorAll('.animate-on-scroll, .footer-animate, .image-zoom-scroll');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Don't unobserve immediately if we want re-trigger (optional),
+                // but for "once" effect like Porsche, unobserve is fine.
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1, // Trigger early
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ============================================
+    // PARALLAX SCROLL EFFECT (MOVES WITH SCROLL)
+    // ============================================
+    // Add '.parallax-item' class to elements you want to move slower than scroll
+    const parallaxItems = document.querySelectorAll('.parallax-item');
+
+    if (parallaxItems.length > 0) {
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+
+            parallaxItems.forEach(item => {
+                // Calculate position relative to viewport
+                const rect = item.getBoundingClientRect();
+                const itemTop = rect.top + scrollY;
+
+                // Only animate if near viewport
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    // Standard parallax: move 20% of scroll speed
+                    // Adjust speed factor (0.1 to 0.3) for intensity
+                    const speed = 0.1;
+                    const yPos = (scrollY - itemTop) * speed;
+
+                    // Apply check to avoid jitters
+                    if (Math.abs(yPos) < 100) { // Limit movement
+                        item.style.transform = `translateY(${yPos}px)`;
+                    }
+                }
+            });
+        }, { passive: true }); // Passive for performance
+    }
+
+
 });
